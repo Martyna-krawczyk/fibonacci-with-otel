@@ -29,6 +29,8 @@ func (a *App) Run(ctx context.Context) error {
 func (a *App) Poll(ctx context.Context) (uint, error) {
 	a.l.Print("What fibonacci no would you like to know?")
 
+	// reading a single integer value from the input source and returning it to 
+	// the calling function along with any errors encountered during the reading process
 	var n uint
 	_, err := fmt.Fscanf(a.r, "%d\n", &n)
 	return n, err
